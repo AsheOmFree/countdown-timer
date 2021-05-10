@@ -38,9 +38,10 @@ const App = () => {
 
   //componentDidMount
   useEffect(() =>{
+    let currentInterval = interval.current
     startTimer();
     return () => {
-      clearInterval(interval.current);
+      clearInterval(currentInterval);
   };
 });
 
